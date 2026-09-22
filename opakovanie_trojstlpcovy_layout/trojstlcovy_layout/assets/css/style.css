@@ -9,14 +9,59 @@
   --svetloseda: hsl(0, 0%, 95%);
 }
 
+body{
+  color: var(--svetloseda);
+}
+
 h2{
   font-family: "Big Shoulders", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 
 p,a{
   font-family: "Lexend Deca", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+
+a{
+  padding: 1rem ;
+  background-color: var(--svetloseda);
+  text-decoration: none;
+  border-radius: 25px;
+  margin: 4rem 0;
+}
+
+.sedans a{ 
+    color: var(--oranzova);
+}
+
+.suv a{
+  color: var(--svetla-cyan);
+}
+
+.luxury a{
+  color: var(--tmava-cyan);
+}
+
+section{
+  padding: 3rem;
 }
 
 .sedans{
   background-color: var(--oranzova);
+}
+
+.suv{
+  background-color: var(--svetla-cyan);
+
+
+}
+
+
+
+.luxury{
+  background-color: var(--tmava-cyan);
 }
