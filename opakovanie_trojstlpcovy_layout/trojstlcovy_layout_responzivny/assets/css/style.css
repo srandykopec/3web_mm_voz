@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root{
+  --oranzova: oklch(70.82% 0.1512 61.38);
+  --svetla-cyan: oklch(47.37% 0.0807 203.41);
+  --tmava-cyan:  oklch(34.38% 0.0589 192.89);
+
+  --transparentna-biela: hsla(0, 0%, 100%, 0.75);
+  --svetloseda: hsl(0, 0%, 95%);
+  --tmava-plocha: hsl(0, 0%, 12%);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  color: var(--svetloseda);
+  background-color: var(--tmava-plocha);
+}
+
+h2{
+  font-family: "Big Shoulders", sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+}
+
+p, a{
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+
+/* --- Hlavicka a navigacia --- */
+
+.hlavicka{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 5%;
+  background-color: var(--tmava-cyan);
+}
+
+.hlavicka__logo{
+  font-family: "Big Shoulders", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.navigacia ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navigacia a{
+  color: var(--svetloseda);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navigacia a:hover{
+  color: var(--oranzova);
+}
+
+/* --- Ponuka (tri karty) --- */
+
+.ponuka{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+article{
+  padding: 3rem 5%;
+}
+
+article a{
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background-color: var(--svetloseda);
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 2rem;
+}
+
+.sedans{
+  background-color: var(--oranzova);
+}
+
+.suv{
+  background-color: var(--svetla-cyan);
+}
+
+.luxury{
+  background-color: var(--tmava-cyan);
+}
+
+.sedans a{
+  color: var(--oranzova);
+}
+
+.sedans a:hover{
+  color: var(--svetloseda);
+  background-color: var(--oranzova);
+  border: 3px solid var(--svetloseda);
+}
+
+.suv a{
+  color: var(--svetla-cyan);
+}
+
+.luxury a{
+  color: var(--tmava-cyan);
+}
+
+/* --- Pata (footer) --- */
+
+.pata{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 5% 1.5rem;
+  background-color: var(--tmava-plocha);
+}
+
+.pata__stlpec h3{
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 .75rem;
+}
+
+.pata__stlpec p{
+  font-size: .95rem;
+  color: var(--transparentna-biela);
+}
+
+.socialne{
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.socialne a{
+  font-size: .95rem;
+  color: var(--svetloseda);
+  text-decoration: none;
+}
+
+.socialne a:hover{
+  color: var(--oranzova);
+}
+
+.copyright{
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--transparentna-biela);
+  text-align: center;
+  font-size: .8rem;
+  color: var(--transparentna-biela);
+}
+
+/* ===================================================
+   RESPONZIVITA - mobile first
+   Mobil:   do 599px    -> 1 stlpec (zakladne styly hore)
+   Tablet:  600 - 899px -> 2 stlpce
+   Desktop: od 900px    -> 3 stlpce
+   =================================================== */
+
+@media (min-width: 600px){
+  .ponuka{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .luxury{
+    grid-column: 1 / -1;
+  }
+
+  .pata{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px){
+  .ponuka{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .luxury{
+    grid-column: auto;
+  }
+
+  .pata{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .navigacia ul{
+    gap: 2.5rem;
+  }
+}

@@ -34,34 +34,47 @@ a{
   margin: 4rem 0;
 }
 
-.sedans a{ 
-    color: var(--oranzova);
-}
-
-.suv a{
-  color: var(--svetla-cyan);
-}
-
-.luxury a{
-  color: var(--tmava-cyan);
-}
-
-section{
-  padding: 3rem;
-}
-
 .sedans{
   background-color: var(--oranzova);
 }
 
 .suv{
   background-color: var(--svetla-cyan);
-
-
 }
-
-
 
 .luxury{
   background-color: var(--tmava-cyan);
 }
+
+.sedans a{ 
+  color: var(--oranzova);
+}
+
+a:hover{
+  color: var(--svetloseda);
+  border: 2px solid var(--transparentna-biela);
+
+}
+
+.sedans a:hover{ 
+  background-color: var(--oranzova);
+}
+
+.suv a{
+  color: var(--svetla-cyan));
+}
+
+.suv a:hover{
+  background-color: var(--svetla-cyan);
+}
+
+.luxury a:hover{
+  background-color: var(--tmava-cyan);
+}
+
+section{
+  padding: 3rem;
+}
+
+
+
