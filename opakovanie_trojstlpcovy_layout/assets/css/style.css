@@ -50,19 +50,19 @@ a{
   color: var(--oranzova);
 }
 
+.suv a{
+  color: var(--svetla-cyan);
+}
+
 a:hover{
   color: var(--svetloseda);
   border: 2px solid var(--transparentna-biela);
-
 }
 
 .sedans a:hover{ 
   background-color: var(--oranzova);
 }
 
-.suv a{
-  color: var(--svetla-cyan);
-}
 
 .suv a:hover{
   background-color: var(--svetla-cyan);
@@ -75,6 +75,14 @@ a:hover{
 section{
   padding: 3rem;
 }
+ 
 
+@media (min-width: 768px){
+
+  main{
+    display: flex;
+    height: 100vh;
+  }
+}
 
 
